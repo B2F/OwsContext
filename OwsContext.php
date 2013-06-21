@@ -41,6 +41,13 @@ class OwsContext extends MinkContext
   }
 
   /**
+   * @When /^I wait (?P<timing>\d+)sec$/
+   */
+  public function iWaitNSec($timing) {
+    $this->getSession()->wait($timing*1000); 
+  }
+
+  /**
    * @When /^I wait (?P<timing>\d+)sec for the text "(?P<text>(?:[^"]|\\")*)"$/
    */
   public function iWaitNSecForTheText($timing, $text) {
