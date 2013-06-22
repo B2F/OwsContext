@@ -34,24 +34,10 @@ class OwsContext extends MinkContext
   }
 
   /**
-   * @When /^I wait for the text "(?P<text>(?:[^"]|\\")*)"$/
-   */
-  public function iWaitForTheText($text) {
-    $this->getSession()->wait(10000, $this->assertPageContainsText($text)); 
-  }
-
-  /**
    * @When /^I wait (?P<timing>\d+)sec$/
    */
   public function iWaitNSec($timing) {
     $this->getSession()->wait($timing*1000); 
-  }
-
-  /**
-   * @When /^I wait (?P<timing>\d+)sec for the text "(?P<text>(?:[^"]|\\")*)"$/
-   */
-  public function iWaitNSecForTheText($timing, $text) {
-    $this->getSession()->wait($timing, $this->assertPageContainsText($text)); 
   }
 
   /**
