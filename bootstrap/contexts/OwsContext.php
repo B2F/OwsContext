@@ -1,6 +1,8 @@
 <?php
 
-use Behat\MinkExtension\Context\MinkContext;
+use Behat\MinkExtension\Context\MinkContext,
+    Behat\Mink\Exception\ElementException,
+    Behat\Mink\Exception\ElementNotFoundException; 
 
 /**
  * Features context.
