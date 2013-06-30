@@ -2,18 +2,6 @@
 
 use Behat\MinkExtension\Context\MinkContext;
 
-use Behat\Behat\Context\ClosuredContextInterface,
-    Behat\Behat\Context\TranslatedContextInterface,
-    Behat\Behat\Context\BehatContext,
-    Behat\Behat\Exception\PendingException;
-use Behat\Gherkin\Node\PyStringNode,
-    Behat\Gherkin\Node\TableNode;
-
-use Behat\Mink\Exception\ElementException,
-    Behat\Mink\Exception\ElementNotFoundException;
-
-use Behat\Mink\Driver\DriverInterface;
-
 /**
  * Features context.
  */
@@ -54,9 +42,9 @@ class OwsContext extends MinkContext
   }
 
   /**
-   * @When /^I switch to the iframe named "(?P<iframe>(?:[^"]|\\")*)"$/
+   * @When /^I switch to the iframe "(?P<iframe>(?:[^"]|\\")*)"$/
    */
-  public function iSwitchToTheIframeNamed($iframe) {
+  public function iSwitchToTheIframe($iframe) {
     $this->getSession()->switchToIFrame($iframe);
   }
 

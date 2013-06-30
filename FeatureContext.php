@@ -15,12 +15,10 @@ use Behat\Gherkin\Node\PyStringNode,
 //   require_once 'PHPUnit/Framework/Assert/Functions.php';
 //
 
-require_once __DIR__ . '/contexts/OwsContext.php';
-
 /**
  * Features context.
  */
-class FeatureContext extends OwsContext
+class FeatureContext extends BehatContext
 {
     /**
      * Initializes context.
@@ -31,6 +29,7 @@ class FeatureContext extends OwsContext
     public function __construct(array $parameters)
     {
         // Initialize your context here
+        $this->useContext('ows', new OwsContext());
     }
 
 //
