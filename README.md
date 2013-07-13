@@ -20,7 +20,7 @@ Selenium webdriver only support javascript mouseovers so this won't work on css 
 
 ---
 
-**Installation:** Place the context file bootstrap/context/OwsContext.php in your behat features/bootstrap directory and 
+**Installation:** Place the context file OwsContext.php in your behat features/bootstrap/context/ directory and 
 it will be automatically available as a subcontext.
 
 **@see** FeatureContext.php for an exemple on how to use a behat subcontext.
@@ -50,7 +50,7 @@ soit disponible.
 
 ---
 
-**Installation:** Placez le fichier bootstrap/context/OwsContext.php dans votre dossier features/bootstrap, le context sera alors
+**Installation:** Placez le fichier OwsContext.php dans votre dossier features/bootstrap/context/, le context sera alors
 automatiquement disponible en sous contexte.
 
 **@see** FeatureContext.php pour un exemple de déclaration de sous contexte.
